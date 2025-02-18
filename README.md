@@ -22,7 +22,6 @@ This repository includes a python implemenation of `CipherBank`.
   ```bash
   python cipher/encryption.py --input_file ../data/test.jsonl --mode decrypt
   ```
-```
 
 ## Test Your Model:
 
