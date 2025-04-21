@@ -74,6 +74,7 @@ python test.py --cipher_type Rot13 --model model_name
 ```
 
 ## 📜 Citation
+If you find **CipherBank** useful for your your research and applications, please kindly cite using this BibTeX:
 ```bibtex
 @misc{cipherbank2024,
   title={CipherBank: Evaluating LLM Reasoning in Cryptographic Tasks},
