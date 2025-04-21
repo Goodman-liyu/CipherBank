@@ -51,8 +51,7 @@ python cipher/encryption.py --input_file ../data/test.jsonl --mode decrypt
 
 ### 🛠️ Predefined Models
 We support API loading for:
-- `GPT` | `DeepSeek` | `Claude` | `Gemini`  
-(Just pass your API key in `utils/tools.py`)
+- `GPT` | `DeepSeek` | `Claude` | `Gemini`   (Just pass your API key in `utils/tools.py`)
 
 ### 🏗️ Custom Models
 ```python
