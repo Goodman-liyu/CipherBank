@@ -1,48 +1,86 @@
-# CipherBank: Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges
 
-This repository includes a python implemenation of `CipherBank`.
+# 🔐 CipherBank: Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges
 
-> Large language models (LLMs) have demonstrated remarkable capabilities, especially the recent advancements in reasoning, such as o1 and o3, pushing the boundaries of AI. Despite these impressive achievements in mathematics and coding, the reasoning abilities of LLMs in domains requiring cryptographic expertise remain underexplored.In this paper, we introduce CipherBank, a comprehensive benchmark designed to evaluate the reasoning capabilities of LLMs in cryptographic decryption tasks. CipherBank comprises 2,358 meticulously crafted problems, covering 262 unique plaintexts across 5 domains and 14 subdomains, with a focus on privacy-sensitive and real-world scenarios that necessitate encryption. From a cryptographic perspective, CipherBank incorporates 3 major categories of encryption methods, spanning 9 distinct algorithms, ranging from classical ciphers to custom cryptographic techniques.We evaluate state-of-the-art LLMs on CipherBank, e.g., GPT-4o, DeepSeek-V3, and cutting-edge reasoning-focused models such as o1 and DeepSeek-R1. Our results reveal significant gaps in reasoning abilities not only between general-purpose chat LLMs and reasoning-focused LLMs but also in the performance of current reasoning-focused models when applied to classical cryptographic decryption tasks, highlighting the challenges these models face in understanding and manipulating encrypted data. Through detailed analysis and error investigations, we provide several key observations that shed light on the limitations and potential improvement areas for LLMs in cryptographic reasoning.These findings underscore the need for continuous advancements in LLM reasoning capabilities.
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Research](https://img.shields.io/badge/field-Cryptography%20%26%20AI-yellow)
 
-## Data Introduction
-- `data/plaintext.jsonl` contains the original plaintext from 5 domains and 14 domains.
-- `data/shot_case.jsonl` provides 3 case examples used in the few-shot testing.
-- `data/test.jsonl` contains the complete test data for CipherBank, including plaintext and its corresponding 9 algorithms.
+> 🚀 Large language models (LLMs) have demonstrated remarkable capabilities, especially the recent advancements in reasoning, such as o1 and o3, pushing the boundaries of AI. Despite these impressive achievements in mathematics and coding, the reasoning abilities of LLMs in domains requiring cryptographic expertise remain underexplored.
 
-## Test Introduction:
+## 📜 Abstract
 
-- You can encrypt `plaintext.jsonl` by running the following command to obtain the corresponding ciphertext:
+🔍 In this paper, we introduce **CipherBank**, a comprehensive benchmark designed to evaluate the reasoning capabilities of LLMs in cryptographic decryption tasks. CipherBank comprises **2,358** meticulously crafted problems, covering **262 unique plaintexts** across **5 domains** and **14 subdomains**, with a focus on privacy-sensitive and real-world scenarios that necessitate encryption.
 
-  ```bash
-  python cipher/encryption.py --input_file ../data/plaintext.jsonl --output_file ../data/test.jsonl --mode cipher
-  ```
+🔐 From a cryptographic perspective, CipherBank incorporates:
+- **3 major categories** of encryption methods
+- **9 distinct algorithms**, ranging from classical ciphers to custom cryptographic techniques
 
-- You can also decrypt the ciphertext by running the following command to test the reversibility of the encryption:
+🤖 We evaluate state-of-the-art LLMs on CipherBank, including:
+- `GPT-4o` | `DeepSeek-V3` | `Claude` | `Gemini`
+- Cutting-edge reasoning-focused models like `o1` and `DeepSeek-R1`
 
-  ```bash
-  python cipher/encryption.py --input_file ../data/test.jsonl --mode decrypt
-  ```
+💡 **Key Findings:**
+- Significant gaps in reasoning abilities between general-purpose and reasoning-focused LLMs
+- Challenges in classical cryptographic decryption tasks
+- Limitations in understanding and manipulating encrypted data
 
-## Test Your Model:
+## 📂 Data Introduction
 
-- We have predefined API loading methods for models like GPT, DeepSeek, Claude, and Gemini in `utils/tools.py`. You only need to pass your own API key to use them directly.
+| File | Description |
+|------|-------------|
+| `data/plaintext.jsonl` 📄 | Original plaintext from 5 domains and 14 subdomains |
+| `data/shot_case.jsonl` 🎯 | 3 case examples for few-shot testing |
+| `data/test.jsonl` 🔐 | Complete test data with plaintext and 9 encryption algorithms |
 
-- For other models, we also recommend writing them in a class format and invoking them directly via `__call__`.
+## 🧪 Test Introduction
 
-- After defining your model, you can test its performance on CipherBank by running:
+### 🔒 Encryption
+```bash
+python cipher/encryption.py --input_file ../data/plaintext.jsonl --output_file ../data/test.jsonl --mode cipher
+```
 
-  ```bash
-  bash run.sh --model model_name --shot_number 3
-  ```
+### 🔓 Decryption (Test Reversibility)
+```bash
+python cipher/encryption.py --input_file ../data/test.jsonl --mode decrypt
+```
 
-  Additionally, you can test the model's performance with more detailed prompts by running:
+## 🤖 Test Your Model
 
-  ```bash
-  bash run.sh --model model_name --shot_number 3 --is_hint True
-  ```
+### 🛠️ Predefined Models
+We support API loading for:
+- `GPT` | `DeepSeek` | `Claude` | `Gemini`  
+(Just pass your API key in `utils/tools.py`)
 
-- You can also test the model's performance on a specific algorithm (e.g., Rot13) by running:
+### 🏗️ Custom Models
+```python
+class YourModel:
+    def __call__(self, prompt):
+        # Your implementation here
+        return response
+```
 
-  ```bash
-  python test.py --cipher_type Rot13 --model model_name
-  ```
+### 🏃‍♂️ Run Tests
+```bash
+# Basic test
+bash run.sh --model model_name --shot_number 3
+
+# With detailed prompts
+bash run.sh --model model_name --shot_number 3 --is_hint True
+
+# Specific algorithm test (e.g., Rot13)
+python test.py --cipher_type Rot13 --model model_name
+```
+
+## 📜 Citation
+```bibtex
+@misc{cipherbank2024,
+  title={CipherBank: Evaluating LLM Reasoning in Cryptographic Tasks},
+  author={Your Name},
+  year={2024},
+  publisher={GitHub},
+  howpublished={\url{https://github.com/yourrepo/cipherbank}}
+}
+```
+
+## 🤝 Contributing
+PRs welcome! Please open an issue first to discuss changes.
