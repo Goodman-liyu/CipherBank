@@ -1,9 +1,12 @@
-
 # 🔐 CipherBank: Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Research](https://img.shields.io/badge/field-Cryptography%20%26%20AI-yellow)
+
+🔗 **Resources:**
+- 🤗 [Hugging Face Dataset](https://huggingface.co/datasets/yu0226/CipherBank)
+- 📜 [arXiv Paper](https://arxiv.org/abs/your-paper-id)
 
 > 🚀 Large language models (LLMs) have demonstrated remarkable capabilities, especially the recent advancements in reasoning, such as o1 and o3, pushing the boundaries of AI. Despite these impressive achievements in mathematics and coding, the reasoning abilities of LLMs in domains requiring cryptographic expertise remain underexplored.
 
