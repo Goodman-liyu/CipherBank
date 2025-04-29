@@ -6,7 +6,7 @@
 
 🔗 **Resources:**
 - 🤗 [Hugging Face Dataset](https://huggingface.co/datasets/yu0226/CipherBank)
-- 📜 [arXiv Paper](https://arxiv.org/abs/your-paper-id)
+- 📜 [arXiv Paper](https://arxiv.org/abs/2504.19093)
 - 🚀 [Project page](https://cipherbankeva.github.io/)
 
 > 🔥 Large language models (LLMs) have demonstrated remarkable capabilities, especially the recent advancements in reasoning, such as o1 and o3, pushing the boundaries of AI. Despite these impressive achievements in mathematics and coding, the reasoning abilities of LLMs in domains requiring cryptographic expertise remain underexplored.
@@ -77,12 +77,14 @@ python test.py --cipher_type Rot13 --model model_name
 ## 📜 Citation
 If you find **CipherBank** useful for your your research and applications, please kindly cite using this BibTeX:
 ```bibtex
-@misc{cipherbank2024,
-  title={CipherBank: Evaluating LLM Reasoning in Cryptographic Tasks},
-  author={Your Name},
-  year={2024},
-  publisher={GitHub},
-  howpublished={\url{https://github.com/yourrepo/cipherbank}}
+@misc{li2025cipherbankexploringboundaryllm,
+      title={CipherBank: Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges}, 
+      author={Yu Li and Qizhi Pei and Mengyuan Sun and Honglin Lin and Chenlin Ming and Xin Gao and Jiang Wu and Conghui He and Lijun Wu},
+      year={2025},
+      eprint={2504.19093},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2504.19093}, 
 }
 ```
 
