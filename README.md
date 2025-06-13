@@ -11,7 +11,7 @@
 
 > 🔥 Large language models (LLMs) have demonstrated remarkable capabilities, especially the recent advancements in reasoning, such as o1 and o3, pushing the boundaries of AI. Despite these impressive achievements in mathematics and coding, the reasoning abilities of LLMs in domains requiring cryptographic expertise remain underexplored.
 
-## News🔥
+## 🔥 News
 2025.05:  🎉🎉 Congratulations: SurveyForge was accepted by ACL-2025 finding conference.
 
 ## 📜 Abstract
