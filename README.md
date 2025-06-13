@@ -11,6 +11,9 @@
 
 > 🔥 Large language models (LLMs) have demonstrated remarkable capabilities, especially the recent advancements in reasoning, such as o1 and o3, pushing the boundaries of AI. Despite these impressive achievements in mathematics and coding, the reasoning abilities of LLMs in domains requiring cryptographic expertise remain underexplored.
 
+## News🔥
+2025.05:  🎉🎉 Congratulations: SurveyForge was accepted by ACL-2025 finding conference.
+
 ## 📜 Abstract
 
 🔍 In this paper, we introduce **CipherBank**, a comprehensive benchmark designed to evaluate the reasoning capabilities of LLMs in cryptographic decryption tasks. CipherBank comprises **2,358** meticulously crafted problems, covering **262 unique plaintexts** across **5 domains** and **14 subdomains**, with a focus on privacy-sensitive and real-world scenarios that necessitate encryption.
